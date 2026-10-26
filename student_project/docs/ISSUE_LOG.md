@@ -10,3 +10,4 @@
 | Prepared Colab notebooks are not GPU evidence | LiteMedSAM GPU output verified previously; MedNet/integration now verified in appended cells of the existing Colab notebook; separate notebook executions remain a distinct reproducibility check |
 | Full research dataset/labels not present | Demo-only testing; no training, dataset collection or accuracy claims |
 | Readme initially described only LiteMedSAM scope | Extended project and assignment audit now distinguish both models and integration |
+| Colab rich-output JavaScript failed to load after successful GPU execution | Colab suggested expired login or third-party-cookie restrictions; notebook changes saved and compact text confirms results. Reload attempted; archive download to computer not yet confirmed. No browser security settings changed. |
