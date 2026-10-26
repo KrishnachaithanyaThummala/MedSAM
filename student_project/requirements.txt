@@ -1,0 +1,13 @@
+# Inference environment. On Colab retain its bundled torch/torchvision CUDA pair.
+torch>=2.6
+torchvision>=0.21
+timm==0.9.12
+gdown==5.2.0
+numpy
+opencv-python-headless
+matplotlib
+pandas
+tqdm
+nbformat
+nbclient
+ipykernel

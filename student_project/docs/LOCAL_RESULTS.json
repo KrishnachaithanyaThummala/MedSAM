@@ -1,0 +1,225 @@
+{
+  "segmentation": {
+    "device": "cpu",
+    "command": [
+      "/Users/krishnachaithanyathummala/Documents/ChatGPT/MEDSAM/.venv/bin/python",
+      "CVPR24_LiteMedSAM_infer.py",
+      "-i",
+      "/Users/krishnachaithanyathummala/Documents/ChatGPT/MEDSAM/outputs/integrated_local/inputs",
+      "-o",
+      "/Users/krishnachaithanyathummala/Documents/ChatGPT/MEDSAM/outputs/integrated_local/masks",
+      "-lite_medsam_checkpoint_path",
+      "/Users/krishnachaithanyathummala/Documents/ChatGPT/MEDSAM/checkpoints/lite_medsam.pth",
+      "-device",
+      "cpu",
+      "-png_save_dir",
+      "/Users/krishnachaithanyathummala/Documents/ChatGPT/MEDSAM/outputs/integrated_local/overlays"
+    ],
+    "wall_seconds_includes_subprocess_loading_io": 3.3871001669904217
+  },
+  "classifier": {
+    "source_sha256": "17acc4bece6033c8735e9453ce410dbc8306f44708c3751df607c4a2834b9894",
+    "class": "Darma",
+    "weights": "random initialization; no trained checkpoint loaded",
+    "seed": 42,
+    "num_classes": 2,
+    "architecture_classes": [
+      "ChannelAttention",
+      "SpatialAttention",
+      "CBAM",
+      "DepthwiseSeparableConv",
+      "ResidualDSCBAMBlock",
+      "ResidualCBAMBackbone",
+      "Darma"
+    ]
+  },
+  "crops": [
+    {
+      "margin": 0.0,
+      "box_xyxy_exclusive": [
+        273,
+        90,
+        347,
+        187
+      ],
+      "file": "crop_margin_00.png",
+      "input_shape": [
+        1,
+        3,
+        224,
+        224
+      ],
+      "raw_scores": [
+        [
+          0.04322659969329834,
+          0.025680024176836014
+        ]
+      ],
+      "output_shape": [
+        1,
+        2
+      ],
+      "activation_shapes": [
+        [
+          1,
+          64,
+          224,
+          224
+        ],
+        [
+          1,
+          128,
+          112,
+          112
+        ],
+        [
+          1,
+          256,
+          56,
+          56
+        ],
+        [
+          1,
+          512,
+          28,
+          28
+        ],
+        [
+          1,
+          1024,
+          14,
+          14
+        ]
+      ],
+      "interpretation": "Untrained numerical scores only; class meanings are not assigned."
+    },
+    {
+      "margin": 0.1,
+      "box_xyxy_exclusive": [
+        265,
+        80,
+        355,
+        197
+      ],
+      "file": "crop_margin_10.png",
+      "input_shape": [
+        1,
+        3,
+        224,
+        224
+      ],
+      "raw_scores": [
+        [
+          0.04306989163160324,
+          0.025568591430783272
+        ]
+      ],
+      "output_shape": [
+        1,
+        2
+      ],
+      "activation_shapes": [
+        [
+          1,
+          64,
+          224,
+          224
+        ],
+        [
+          1,
+          128,
+          112,
+          112
+        ],
+        [
+          1,
+          256,
+          56,
+          56
+        ],
+        [
+          1,
+          512,
+          28,
+          28
+        ],
+        [
+          1,
+          1024,
+          14,
+          14
+        ]
+      ],
+      "interpretation": "Untrained numerical scores only; class meanings are not assigned."
+    },
+    {
+      "margin": 0.2,
+      "box_xyxy_exclusive": [
+        258,
+        70,
+        362,
+        207
+      ],
+      "file": "crop_margin_20.png",
+      "input_shape": [
+        1,
+        3,
+        224,
+        224
+      ],
+      "raw_scores": [
+        [
+          0.04283997789025307,
+          0.025371592491865158
+        ]
+      ],
+      "output_shape": [
+        1,
+        2
+      ],
+      "activation_shapes": [
+        [
+          1,
+          64,
+          224,
+          224
+        ],
+        [
+          1,
+          128,
+          112,
+          112
+        ],
+        [
+          1,
+          256,
+          56,
+          56
+        ],
+        [
+          1,
+          512,
+          28,
+          28
+        ],
+        [
+          1,
+          1024,
+          14,
+          14
+        ]
+      ],
+      "interpretation": "Untrained numerical scores only; class meanings are not assigned."
+    }
+  ],
+  "source_commits": {
+    "LiteMedSAM": "b0fab476e54e631dd412b25e0db9fdf2a2b0f54c",
+    "MedNet": "6adb072630811b1d39568a87732aed96dc39c9ae"
+  },
+  "checkpoint_sha256": "79d8c9dca6db4d69d3f905579e5250af05e859fff9c1f543e89a513c3028ce76",
+  "python": "3.12.14",
+  "torch": "2.6.0",
+  "total_seconds": 3.5555549999990035,
+  "preprocessing": "RGB->BGR; resize 224x224 linear; divide 255; mean [.485,.456,.406], std [.229,.224,.225]",
+  "status": "Executed software prototype; MedNet is untrained; no clinical interpretation."
+}
