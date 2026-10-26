@@ -70,3 +70,11 @@ Local run from the workspace root:
 For your own image and human-provided box, call `src.pipeline.execute(image_rgb_uint8, box_xyxy, lite_repo, med_repo, checkpoint, output, device)` from a notebook. The demo CLI reads the authors' NPZ format. Output folders contain input/box, mask, overlays, crops, raw scores, source/checkpoint provenance, logs and package versions. `docs/LOCAL_RESULTS.json` preserves one measured run. Prepared GPU notebooks are not themselves evidence of GPU execution; see the task audit.
 
 MedNet and the integrated pipeline have now also executed successfully on the Tesla T4 in appended cells of your existing Colab notebook. See docs/ASSIGNMENT_STATUS.md for exact evidence and remaining teaching/reproducibility work.
+
+## Explicit Tasks 1–2 notebook (recommended starting point)
+
+`notebooks/00_Tasks_1_2_LiteMedSAM_Colab.ipynb` states explicitly that it executes **LiteMedSAM / TinyViT**, compares it with larger MedSAM, maps every directly used file, clones BOTH of your forks, verifies exact commits against original repositories, inventories model/dependency/demo/checkpoint locations, records installed versions, and saves the official demo mask plus stage/error logs. MedNet is obtained and inspected here; classification is outside these two tasks. Both forks were verified through GitHub as actual forks of bowang-lab/MedSAM and Md-Ferdous/MedNet.
+
+The matching `00_Tasks_1_2_LiteMedSAM_Executed_Local.ipynb` contains all eight code cells successfully executed on local CPU, using exact source/official assets already downloaded and original-source commit verification over the network. GPU execution of this newly organized notebook remains to be checked in Colab; the unchanged authors' inference path was previously verified there on T4. `01_litemedsam_test.ipynb` now uses the same clearer Tasks 1–2 notebook. No original model source was modified.
+
+Open in Colab: https://colab.research.google.com/github/KrishnachaithanyaThummala/MedSAM/blob/codex/student-foundation/student_project/notebooks/00_Tasks_1_2_LiteMedSAM_Colab.ipynb
