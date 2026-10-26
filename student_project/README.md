@@ -55,8 +55,8 @@ Start with [the models-and-code lessons](docs/MODELS_AND_CODE_LESSONS.md), then 
 
 Assignment notebooks (upload into Colab, choose GPU, execute in order):
 1. `notebooks/01_litemedsam_test.ipynb` — pretrained segmentation; GPU run previously reviewed.
-2. `notebooks/02_mednet_test.ipynb` — Darma two-output test; prepared for GPU.
-3. `notebooks/03_integrated_demo.ipynb` — segmentation, three crops and untrained scores; prepared for GPU.
+2. `notebooks/02_mednet_test.ipynb` — Darma two-output test; prepared for GPU; model verified in the existing live Colab notebook.
+3. `notebooks/03_integrated_demo.ipynb` — segmentation, three crops and untrained scores; prepared for GPU; model verified in the existing live Colab notebook.
 
 New notebooks clone the project additions from your fork's `codex/student-foundation` branch under `student_project/`. Model definitions remain the authors' original source. MedNet is cloned separately at the recorded commit. Our AST loader avoids training-only imports without modifying architecture class bodies. No trained MedNet checkpoint is bundled or claimed.
 
@@ -68,3 +68,5 @@ Local run from the workspace root:
 ```
 
 For your own image and human-provided box, call `src.pipeline.execute(image_rgb_uint8, box_xyxy, lite_repo, med_repo, checkpoint, output, device)` from a notebook. The demo CLI reads the authors' NPZ format. Output folders contain input/box, mask, overlays, crops, raw scores, source/checkpoint provenance, logs and package versions. `docs/LOCAL_RESULTS.json` preserves one measured run. Prepared GPU notebooks are not themselves evidence of GPU execution; see the task audit.
+
+MedNet and the integrated pipeline have now also executed successfully on the Tesla T4 in appended cells of your existing Colab notebook. See docs/ASSIGNMENT_STATUS.md for exact evidence and remaining teaching/reproducibility work.
